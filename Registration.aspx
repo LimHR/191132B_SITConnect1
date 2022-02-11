@@ -62,7 +62,7 @@
     <p>Photo:<asp:FileUpload ID="FileUpload1hr" runat="server" />
             </p>
     <p>
-        <asp:Button ID="btn_submithr" runat="server" Text="Submit" onclick="btn_Submit_Click" />
+        <asp:Button ID="btn_submithr" runat="server" Text="Submit" onclick="btn_Submithr_Click" />
     </p>
 </form>
 
