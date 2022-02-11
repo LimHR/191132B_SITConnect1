@@ -16,8 +16,8 @@
             </p>
         </div>
         <p>
-            <asp:Button ID="btn_loginhr" runat="server" Text="Login" OnClick="btn_login_Click" />
-            <asp:Button ID="btn_registerhr" runat="server" Text="Register" OnClick="btn_register_Click" />
+            <asp:Button ID="btn_loginhr" runat="server" Text="Login" OnClick="btn_loginhr_Click" />
+            <asp:Button ID="btn_registerhr" runat="server" Text="Register" OnClick="btn_registerhr_Click" />
         </p>
         <p>
             <asp:Label ID="errorMsghr" runat="server" Text=""></asp:Label>
