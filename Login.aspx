@@ -10,17 +10,17 @@
     <form id="form1" runat="server">
         <div>
             <h1>Login</h1>
-            <p>Email:<asp:TextBox ID="tb_email" runat="server"></asp:TextBox>
+            <p>Email:<asp:TextBox ID="tb_emailhr" runat="server"></asp:TextBox>
             </p>
-            <p>Password:<asp:TextBox ID="tb_pwd" runat="server" TextMode="Password"></asp:TextBox>
+            <p>Password:<asp:TextBox ID="tb_pwdhr" runat="server" TextMode="Password"></asp:TextBox>
             </p>
         </div>
         <p>
-            <asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
-            <asp:Button ID="btn_register" runat="server" Text="Register" OnClick="btn_register_Click" />
+            <asp:Button ID="btn_loginhr" runat="server" Text="Login" OnClick="btn_login_Click" />
+            <asp:Button ID="btn_registerhr" runat="server" Text="Register" OnClick="btn_register_Click" />
         </p>
         <p>
-            <asp:Label ID="errorMsg" runat="server" Text=""></asp:Label>
+            <asp:Label ID="errorMsghr" runat="server" Text=""></asp:Label>
         </p>
     </form>
 </body>
