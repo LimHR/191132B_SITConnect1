@@ -32,7 +32,7 @@ namespace prac
                 Response.Redirect("Login.aspx", false);
             }
         }
-        protected void LogoutMe(object sender, EventArgs e)
+        protected void LogoutMehr(object sender, EventArgs e)
         {
             Session.Clear();
             Session.Abandon();
