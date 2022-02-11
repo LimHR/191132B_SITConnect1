@@ -108,10 +108,10 @@ namespace prac
 
         
 
-        protected void btn_login_Click(object sender, EventArgs e)
+        protected void btn_loginhr_Click(object sender, EventArgs e)
         {
-            string pwd = tb_pwd.Text.ToString().Trim();
-            string email = tb_email.Text.ToString().Trim();
+            string pwd = tb_pwdhr.Text.ToString().Trim();
+            string email = tb_emailhr.Text.ToString().Trim();
             SHA512Managed hashing = new SHA512Managed();
             string dbHash = getDBHash(email);
             string dbSalt = getDBSalt(email);
@@ -124,7 +124,7 @@ namespace prac
                     string userHash = Convert.ToBase64String(hashWithSalt);
                     if (userHash.Equals(dbHash))
                     {
-                        Session["LoggedIn"] = tb_email.Text.Trim();
+                        Session["LoggedIn"] = tb_emailhr.Text.Trim();
                         string guid = Guid.NewGuid().ToString();
                         Session["AuthToken"] = guid;
 
@@ -136,7 +136,7 @@ namespace prac
 
                     else
                     {
-                        errorMsg.Text = "Wrong email or password";
+                        errorMsghr.Text = "Wrong email or password";
                         Response.Redirect("Login.aspx");
                     }
                 }
@@ -148,7 +148,7 @@ namespace prac
             finally { }
         }
 
-        protected void btn_register_Click(object sender, EventArgs e)
+        protected void btn_registerhr_Click(object sender, EventArgs e)
         {
             Response.Redirect("Registration.aspx", false);
         }
