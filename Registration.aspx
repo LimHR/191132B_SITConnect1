@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <script type="text/javascript">
         function validate() {
-            var str = document.getElementById('<%=tb_pwd.ClientID %>').value;
+            var str = document.getElementById('<%=tb_pwdhr.ClientID %>').value;
             if (str.length < 12) {
                 document.getElementById("lbl_pwdcheckerhr").innerHTML = "Password Length Must be at Least 12 characters";
                 document.getElementById("lbl_pwdcheckerhr").style.color = "Red";
