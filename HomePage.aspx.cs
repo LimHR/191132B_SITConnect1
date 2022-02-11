@@ -21,9 +21,9 @@ namespace prac
                     }
                     else
                     {
-                        lblmessage.Text = "Congratulations ! you are logged in";
-                        lblmessage.ForeColor = System.Drawing.Color.Green;
-                        btn_logout.Visible = true;
+                        lblmessagehr.Text = "Congratulations ! you are logged in";
+                        lblmessagehr.ForeColor = System.Drawing.Color.Green;
+                        btn_logouthr.Visible = true;
                     }
                 }
             }
