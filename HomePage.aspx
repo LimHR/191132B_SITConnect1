@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
         <p>
             Welcome</p>
-        <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="LogoutMe"/>
+        <asp:Button ID="btn_logouthr" runat="server" Text="Logout" OnClick="LogoutMe"/>
         <p>
-            <asp:Label ID="lblmessage" runat="server" EnableViewState="false"></asp:Label>
+            <asp:Label ID="lblmessagehr" runat="server" EnableViewState="false"></asp:Label>
         </p>
     </form>
 </body>
