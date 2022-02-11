@@ -54,9 +54,9 @@ static string finalHash;
             }
             return score;
         }
-        protected void btn_Submit_Click(object sender, EventArgs e)
+        protected void btn_Submithr_Click(object sender, EventArgs e)
         {
-            int scores = checkPassword(tb_pwd.Text);
+            int scores = checkPassword(tb_pwdhr.Text);
             string status = "";
             switch (scores)
             {
@@ -78,15 +78,15 @@ static string finalHash;
                 default:
                     break;
             }
-            lbl_pwdchecker.Text = "Status : " + status;
+            lbl_pwdcheckerhr.Text = "Status : " + status;
             if (scores < 5)
             {
-                lbl_pwdchecker.ForeColor = Color.Red;
+                lbl_pwdcheckerhr.ForeColor = Color.Red;
                 return;
             }
-            lbl_pwdchecker.ForeColor = Color.Green;
+            lbl_pwdcheckerhr.ForeColor = Color.Green;
             //string pwd = get value from your Textbox
-            string pwd = tb_pwd.Text.ToString().Trim(); ;
+            string pwd = tb_pwdhr.Text.ToString().Trim(); ;
             //Generate random "salt"
             RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
             byte[] saltByte = new byte[8];
@@ -135,13 +135,13 @@ static string finalHash;
                         using (SqlDataAdapter sda = new SqlDataAdapter())
                         {
                             cmd.CommandType = CommandType.Text;
-                            cmd.Parameters.AddWithValue("@Email", tb_email.Text.Trim());
-                            cmd.Parameters.AddWithValue("@FirstName", tb_firstname.Text.Trim());
-                            cmd.Parameters.AddWithValue("@CreditCard", encryptData(tb_creditcard.Text.Trim()));
+                            cmd.Parameters.AddWithValue("@Email", tb_emailhr.Text.Trim());
+                            cmd.Parameters.AddWithValue("@FirstName", tb_firstnamehr.Text.Trim());
+                            cmd.Parameters.AddWithValue("@CreditCard", encryptData(tb_creditcardhr.Text.Trim()));
                             cmd.Parameters.AddWithValue("@PasswordHash", finalHash);
                             cmd.Parameters.AddWithValue("@PasswordSalt", salt);
-                            cmd.Parameters.AddWithValue("@LastName", tb_lastName.Text.Trim());
-                            cmd.Parameters.AddWithValue("@DOB", tb_DOB.Text.Trim());
+                            cmd.Parameters.AddWithValue("@LastName", tb_lastNamehr.Text.Trim());
+                            cmd.Parameters.AddWithValue("@DOB", tb_DOBhr.Text.Trim());
                             cmd.Parameters.AddWithValue("@IV", Convert.ToBase64String(IV));
                             cmd.Parameters.AddWithValue("Key", Convert.ToBase64String(Key));
                             cmd.Connection = con;
